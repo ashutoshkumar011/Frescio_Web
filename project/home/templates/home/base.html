@@ -17,7 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="{% static 'home/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
     <!--// bootstrap-css -->
     <!-- css -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" type="text/css" media="all" />
     <!--// css -->
     <!-- font-awesome icons -->
     <link href="{% static 'home/css/font-awesome.css' %}" rel="stylesheet">
@@ -149,7 +149,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
         </div>
+        <!-- //banner -->
+        <!---728x90--->
 
+        <!-- a-about -->
         <div class="a-grid">
             <div class="container">
                 <div class="w3l-about-heading">
@@ -217,7 +220,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="team-grids">
                     <div class="col-md-3 col-xs-6 agileinfo-team-grid">
-                        <img src="images/t1.jpg" alt="" />
+                        <img src="{% static 'home/images/t1.jpg' %}" alt="" />
                         <div class="captn">
                             <h4>Peter Parker</h4>
                             <p>Vestibulum </p>
@@ -231,7 +234,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                     <div class="col-md-3 col-xs-6 agileinfo-team-grid">
-                        <img src="images/t2.jpg" alt="" />
+                        <img src="{% static 'home/images/t2.jpg' %}" alt="" />
                         <div class="captn">
                             <h4>Mary Jane</h4>
                             <p>Aliquam non</p>
@@ -245,7 +248,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                     <div class="col-md-3 col-xs-6 agileinfo-team-grid">
-                        <img src="images/t3.jpg" alt="" />
+                        <img src="{% static 'home/images/t3.jpg' %}" alt="" />
                         <div class="captn">
                             <h4>Johan Botha</h4>
                             <p>Nulla molestie</p>
@@ -259,7 +262,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                     <div class="col-md-3 col-xs-6 agileinfo-team-grid">
-                        <img src="images/t4.jpg" alt="" />
+                        <img src="{% static 'home/images/t4.jpg' %}" alt="" />
                         <div class="captn">
                             <h4>Steven Wilson</h4>
                             <p>Quisque vitae</p>
@@ -276,7 +279,89 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
         </div>
+        <!-- //team -->
+        <!-- footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="agile-footer-grids">
+                    <div class="col-md-3 w3-agile-footer-grid">
+                        <h3>About</h3>
+                        <p>Aenean cursus dignissim porta. Quisque mattis dolor sem, nec ultrices arcu consequat vel.
+                            Phasellus sollicitudin dui diam, et scelerisque nunc venenatis non. Cras dapibus, urna et
+                            pellentesque egestas</p>
+                    </div>
+                    <div class="col-md-3 w3-agile-footer-grid">
+                        <h3>Events</h3>
+                        <ul>
+                            <li>12th Aug <a href="single.html">Curabitur</a></li>
+                            <li>10th Sept <a href="single.html">Fusce urna</a></li>
+                            <li>24th Sept <a href="single.html">Praesent</a></li>
+                            <li>17th Oct <a href="single.html">Malesuada </a></li>
+                            <li>09th Dec <a href="single.html">Cum sociis</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 w3-agile-footer-grid">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li class="text"><a href="about.html">About</a></li>
+                            <li class="text"><a href="typography.html">Typography</a></li>
+                            <li class="text"><a href="icons.html">Icons</a></li>
+                            <li class="text"><a href="gallery.html">Gallery</a></li>
+                            <li class="text"><a href="blog.html">Blog</a></li>
+                            <li class="text"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 w3-agile-footer-grid">
+                        <h3>Newsletter</h3>
+                        <form action="#" method="post">
+                            <input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here"
+                                required="">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- //footer -->
+        <!-- copyright -->
+        <div class="copyright">
+            <div class="container">
+                <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a> </p>
+            </div>
+        </div>
+        <!-- //copyright -->
+        <script src="{% static 'home/js/SmoothScroll.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/js/move-top.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/js/easing.js' %}"></script>
+        <!-- here stars scrolling icon -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /*
+                    var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear' 
+                    };
+                */
 
+                $().UItoTop({ easingType: 'easeOutQuart' });
+
+            });
+        </script>
+        <!-- //here ends scrolling icon -->
+        <!-- parallax -->
+        <script src="{% static 'home/js/jarallax.js' %}"></script>
+        <script type="text/javascript">
+            /* init Jarallax */
+            $('.jarallax').jarallax({
+                speed: 0.5,
+                imgWidth: 1366,
+                imgHeight: 768
+            })
+        </script>
+        <!-- //parallax -->
     </body>
 
 </html>
