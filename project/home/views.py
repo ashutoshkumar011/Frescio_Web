@@ -5,6 +5,3 @@ from django.http import HttpResponse
 def home(request):
     return render( request, 'home/homepage.html' )
     # return render(request, 'home/base.html' )
-
-def register(request):
-    return render( request, 'home/register.html' )
