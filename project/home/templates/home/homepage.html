@@ -6,7 +6,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
-    <title>Harvest Life an agriculture Category Bootstrap responsive Website Template | Home </title>
+    <title>Frescio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="keywords" content="Harvest Life Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -30,8 +30,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
         rel='stylesheet' type='text/css'>
     <!-- //font -->
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="{% static 'home/js/jquery-1.11.1.min.js' %}"></script>
+    <script src="{% static 'home/js/bootstrap.js' %}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
@@ -139,7 +139,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </ul>
                 </div>
                 <div class="clearfix"> </div>
-                <script src="js/responsiveslides.min.js"></script>
+                <script src="{% static 'home/js/responsiveslides.min.js' %}"></script>
                 <script>
                     // You can also use "$(window).load(function() {"
                     $(function () {
@@ -246,10 +246,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="col-md-7 w3l-welcome-right">
                         <div class="w3l-welcome-right-grids">
                             <div class="col-sm-5 w3l-welcome-right-img">
-                                <img src="images/4.jpg" alt="" />
+                                <img src="{% static 'home/images/4.jpg' %}" alt="" />
                             </div>
                             <div class="col-sm-7 w3l-welcome-right-img1">
-                                <img src="images/5.jpg" alt="" />
+                                <img src="{% static 'home/images/5.jpg' %}" alt="" />
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -400,10 +400,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
         <!-- //copyright -->
-        <script src="js/responsiveslides.min.js"></script>
-        <script src="js/SmoothScroll.min.js"></script>
-        <script type="text/javascript" src="js/move-top.js"></script>
-        <script type="text/javascript" src="js/easing.js"></script>
+        <script src="{% static 'home/js/responsiveslides.min.js' %}"></script>
+        <script src="{% static 'home/js/SmoothScroll.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/js/move-top.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/js/easing.js' %}"></script>
         <!-- here stars scrolling icon -->
         <script type="text/javascript">
             $(document).ready(function () {
