@@ -1,0 +1,43 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Signup{% endblock title %}
+
+{% block body %}
+
+
+<div class="container">
+
+
+    <h1 class="my-3">Signup</h1>
+
+        <div class="col-md-6 contact-form-left">
+            <div class="agileinfo-contact-form-grid">
+                <form action="#" method="post">
+                    {% csrf_token %}
+
+                    {% for field in signup_form %}
+                    <p>
+                        {{field.label_tag}}
+                        <br/>
+                        {{field}}
+
+                         {% comment %} {% if field.help_text %}
+                        <small class="text-muted">{{field.help_text}}</small>
+                        {% endif %}  {% endcomment %}
+
+                        {% for error in field.errors %}
+                            <p class="text-danger ">{{error}}</p>
+                        {% endfor %}
+                    </p>
+                    {% endfor %}
+                    <br/>
+                    <button class="btn1" type="submit">Signup</button>
+                    <br/>
+                    <br/>
+                </form>
+            </div>
+        </div>
+
+</div> 
+
+{% endblock body %}
