@@ -22,5 +22,5 @@ class LoginForm(forms.ModelForm):
         if self.is_valid():
             phone = self.cleaned_data['phone']
             password = self.cleaned_data['password']
-            if not authenticate(location=location, password=password):
+            if not authenticate(phone=phone, password=password):
                 raise forms.ValidationError("Invalid Login Credentials")
