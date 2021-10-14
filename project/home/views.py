@@ -8,3 +8,6 @@ def home(request):
 
 def register(request):
     return render( request, 'home/register.html' )
+
+def fertilizer(request):
+    return render( request, 'home/fertilizer.html')
