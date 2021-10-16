@@ -1,8 +1,12 @@
 from django.http.response import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import SignupForm, LoginForm
 from django.contrib.auth import authenticate, login, logout
+from django.urls import reverse
 from datetime import datetime
+from home import views
+# from django.core.urlresolvers import reverse_lazy
 from django.contrib import messages
 from .models import *
 
@@ -23,11 +27,11 @@ def register(request):
                     user = authenticate(phone=phone, password=password)
                     if user:
                         login(request, user)
-                        return redirect('')
+                        return redirect(reverse('homepage'))
                 else:
                     context['login_form'] = form
                 
-            # return render(request, 'user/register.html', context)
+            return render(request, 'user/register.html', context)
         elif request.POST.get('submit') == 'signup':
             print("xxxxxx")
             if request.POST:
@@ -39,7 +43,8 @@ def register(request):
                     raw_pass = form.cleaned_data.get('password1')
                     new_account = authenticate(phone=phone, password=raw_pass)
                     login(request, new_account)
-                    return redirect('')
+                    return redirect(reverse('homepage'))
+                    
                 else:
                     context['signup_form'] = form
 
