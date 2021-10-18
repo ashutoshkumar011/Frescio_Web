@@ -1,0 +1,48 @@
+,Crop,N,P,K,pH
+0,Rice,80,40,40,5.5
+1,Wheat,100,50,50,6.4
+2,Barley,70,40,45,5.5
+3,Maize,80,40,20,5.5
+4,Sugarcane,150,80,80,7
+5,Chickpea,40,60,80,5.5
+6,Cotton,80,40,40,6.5
+12,Kidneybeans,20,60,20,5.5
+13,Pigeonpeas,20,60,20,5.5
+14,Mothbeans,20,40,20,5.5
+15,Mungbean,20,40,20,5.5
+18,Blackgram,40,60,20,5
+24,Lentil,20,60,20,5.5
+60,Pomegranate,20,10,40,5.5
+61,Banana,100,75,50,6.5
+62,Mango,20,20,30,5
+63,Grapes,20,125,200,4
+66,Watermelon,100,10,50,5.5
+67,Muskmelon,100,10,50,5.5
+69,Apple,20,125,200,6.5
+74,Orange,20,10,10,4
+75,Papaya,50,50,50,6
+88,Coconut,20,10,30,5
+93,Cotton,120,40,20,5.5
+94,Jute,80,40,40,5.5
+95,Coffee,100,20,30,5.5
+96,Bajra,80,45,40,6
+703,Lentils(Masoor Dal),20,60,20,5.64
+764,Turmeric,25,60,100,5.14
+809,Cucumber,60,60,85,6.66
+832,Lemon,20,10,10,3.26
+833,Tomato,100,40,90,6.16
+775,Sunflower,50,60,30,5.64
+1653,Ragi (naachnnii),50,40,20,5.34
+1667,Black Gram,40,60,20,4.84
+1654,Chickpeas(Channa),40,60,80,5.34
+1650,Jowar(Sorghum),80,40,40,5.34
+1630,Bay Leaf,100,50,25,4.86
+1601,Gooseberry(Amla),20,50,20,4.36
+1655,French Beans(Farasbi),90,125,60,4.84
+1656,Fava beans (Papdi - Val),90,125,60,4.84
+1657,Lima beans(Pavta),40,60,20,4.84
+1658,Cluster Beans(Gavar),25,50,25,4.84
+1659,Soyabean,20,60,20,5.34
+1660,Black eyed beans( chawli),20,60,20,5.34
+1661,Kidney beans,20,60,20,5.34
+1662,Pigeon peas (Toor Dal),20,60,20,5.34
