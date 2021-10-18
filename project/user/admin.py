@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User
+from .models import User, crop
 from django.contrib.auth.admin import UserAdmin
 # from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
@@ -16,3 +16,4 @@ class MyUserAdmin(UserAdmin):
 
 
 admin.site.register(User, MyUserAdmin)
+admin.site.register(crop)

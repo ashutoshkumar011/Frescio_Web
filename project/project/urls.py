@@ -22,4 +22,4 @@ urlpatterns = [
     path('register', include('user.urls')),
     path('bazaar', include('ecommerce.urls'))
     
-]
+] 

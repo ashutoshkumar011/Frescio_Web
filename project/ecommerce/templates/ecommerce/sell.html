@@ -93,9 +93,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
     </div>
     <div class="modal-body">
     </br>
-            <form action="" method='POST'>
+            <form action="" method='POST' enctype="multipart/form-data" >
                 {% csrf_token %}
-                
+                <input type="hidden" name="name" value="add_new_crop">
                 <div class="form-floating mb-3">
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>

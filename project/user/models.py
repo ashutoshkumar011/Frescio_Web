@@ -77,4 +77,4 @@ class crop(models.Model):
     crop_name = models.CharField(max_length=20)
     price = models.IntegerField()
     quantity = models.IntegerField()
-    photo = models.ImageField(null=True, blank=True )
+    photo = models.ImageField(upload_to="image/crops", null=True )
