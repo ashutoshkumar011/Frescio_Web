@@ -25,3 +25,6 @@ def fertilizer(request):
     context['crop'] = data
 
     return render( request, 'home/fertilizer.html',context)
+
+def fertpred(request):
+    return render( request, 'home/fertilizer_result.html')

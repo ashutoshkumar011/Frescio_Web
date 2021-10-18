@@ -18,7 +18,8 @@
 
 <div style=" width: 350px; height: 40rem; margin: 0px auto; color: black; border-radius: 25px; padding: 10px 10px; ">
 
-    <form method="POST" action="">
+    <form method="POST" action="{% url 'fert_res' %}">
+        {% csrf_token %}
         <div class="form-group">
             <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen</b></label>
             <input type="number" class="form-control" id="Nitrogen" name="nitrogen"

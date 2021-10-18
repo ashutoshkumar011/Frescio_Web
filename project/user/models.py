@@ -72,3 +72,9 @@ class User(AbstractBaseUser):
     def has_module_perms(self, app_label):
         return True
 
+class crop(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    crop_name = models.CharField(max_length=20)
+    price = models.IntegerField()
+    quantity = models.IntegerField()
+    photo = models.ImageField(null=True, blank=True )
