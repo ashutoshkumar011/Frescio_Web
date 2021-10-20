@@ -27,6 +27,9 @@ def sellcrops(request):
                 data.append(row[1])
         data.sort()
         context['crop'] = data
-        return render( request, 'ecommerce/sell.html',context)
+
+        crops_added = crop.objects.filter(user=request.user)
+        
+        return render( request, 'ecommerce/sell.html', {'crop':data, 'crops_added': crops_added} )
     else:
         return HttpResponse("sorry")
