@@ -2,6 +2,168 @@
 
 {% block body %}
 
-    RESULT PAGE
+<style>
+    div.card3 {
+        width: 250px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 
+    div.container3 {
+        padding: 10px;
+    }
+</style>
+
+
+<div class="card3" style="width: 80%; margin: auto; margin-top: 20px; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px;">
+    <div class="container3">
+        {% if nkey == "NHigh" %}
+        <h4><b>The N value of soil is high and might give rise to weeds.</b></h4>
+
+        Please consider the following suggestions: <br>
+
+        1. Manure – adding manure is one of the simplest ways to amend your soil with nitrogen. Be careful as there are
+        various
+        types of manures with varying degrees of nitrogen. <br>
+        2. Coffee grinds – Coffee grinds are considered a green compost material which is rich in nitrogen. Once the
+        grounds
+        break down, your soil will be fed with delicious nitrogen. It also provides increased drainage to your soil.
+        <br>
+        3. Plant nitrogen fixing plants – planting vegetables that are in Fabaceae family like peas, beans and soybeans
+        have the
+        ability to increase nitrogen in your soil. <br>
+        4. Plant ‘green manure’ crops like cabbage, corn and brocolli. <br>
+        5. Use mulch (wet grass) while growing crops - Mulch can also include sawdust and scrap soft woods. <br>
+
+        {% elif nkey == "Nlow" %}
+        <h4><b>The N value of your soil is low. </b></h4>
+
+        Please consider the following suggestions: <br>
+
+        1. Water – soaking your soil with water will help leach the nitrogen deeper into your soil, effectively leaving
+        less for
+        your plants to use. <br>
+        2. Add composted manure to the soil. <br>
+        3. Plant Nitrogen fixing plants like peas or beans. <br>
+        4. Use NPK fertilizers with high N value. <br>
+        5. Do nothing – It may seem counter-intuitive, but if you already have plants that are producing lots of
+        foliage, it may
+        be best to let them continue to absorb all the nitrogen to amend the soil for your next crops. <br>
+        {% else %}
+        <h4><b>The N value of your soil is within the optimal range.</b></h4>
+
+        {% endif %}
+
+
+        {% if pkey == "PHigh" %}
+        <br><h4><b>
+                The P value of your soil is high. </b></h4>
+
+        Please consider the following suggestions: <br>
+
+        1. Avoid adding manure – manure contains many key nutrients for your soil but typically including high levels of
+        phosphorous. <br>
+        2. Use only phosphorus-free fertilizer – if you can limit the amount of phosphorous added to your soil, you can
+        let
+        the
+        plants use the existing phosphorus while still providing other key nutrients such as Nitrogen and Potassium.
+        Find a
+        fertilizer with numbers such as 10-0-10, where the zero represents no phosphorous. <br>
+        3. Water your soil – soaking your soil liberally will aid in driving phosphorous out of the soil. This is
+        recommended as
+        a last ditch effor <br>
+        4. Plant nitrogen fixing vegetables to increase nitrogen without increasing phosphorous (like beans and peas).
+        <br>
+        5. Use crop rotations to decrease high phosphorous levels. <br>
+
+        {% elif pkey == "Plow" %}<br><h4><b>
+                The P value of your soil is low. </b></h4>
+
+        Please consider the following suggestions: <br>
+
+        1. Bone meal – a fast acting source that is made from ground animal bones which is rich in phosphorous. <br>
+        2. Rock phosphate – a slower acting source where the soil needs to convert the rock phosphate into phosphorous
+        that
+        the
+        plants can use. <br>
+        3. Phosphorus Fertilizers – applying a fertilizer with a high phosphorous content in the NPK ratio (example:
+        10-20-10,
+        20 being phosphorous percentage). <br>
+        4. Organic compost – adding quality organic compost to your soil will help increase phosphorous content. <br>
+        5. Manure – as with compost, manure can be an excellent source of phosphorous for your plants. <br>
+        {% else %}
+        <br><h4><b>
+                The P value of your soil is within the optimal range. </b></h4>
+        {% endif %}
+
+        {% if kkey == "KHigh" %}
+        <br><h4><b>
+                The K value of your soil is high. </b></h4>
+
+        Please consider the following suggestions: <br>
+
+        1. Loosen the soil- deeply with a shovel, and water thoroughly to dissolve water-soluble potassium. Allow the
+        soil
+        to
+        fully dry, and repeat digging and watering the soil two or three more times. <br>
+        2. Sift through the soil, and remove as many rocks as possible, using a soil sifter. Minerals occurring in rocks
+        such as
+        mica and feldspar slowly release potassium into the soil slowly through weathering. <br>
+        3. Mix crushed eggshells, crushed seashells, wood ash or soft rock phosphate to the soil to add calcium. Mix in
+        up
+        to 10
+        percent of organic compost to help amend and balance the soil. <br>
+        4. Use NPK fertilizers with low K levels and organic fertilizers since they have low NPK values. <br>
+        5. Grow a cover crop of legumes that will fix nitrogen in the soil. This practice will meet the soil’s needs for
+        nitrogen without increasing phosphorus or potassium. <br>
+        {% elif kkey == "Klow" %}
+        <br><h4><b>The K value of your soil is low. </b></h4>
+
+        Please consider the following suggestions: <br>
+
+        1. Mix in muricate of potash or sulphate of potash <br>
+        2. Try kelp meal or seaweed <br>
+        3. Try Sul-Po-Mag <br>
+        4. Bury banana peels an inch below the soils surface <br>
+        5. Use Potash fertilizers since they contain high values potassium <br>
+        {% else %}
+        <br><h4><b>
+                The K value of your soil is within the optimal range. </b></h4>
+        {% endif %}
+
+        {% if phkey == "phHigh" %}
+        <br><h4><b>
+                The pH value of your soil is high. </b></h4>
+
+        Please consider the following suggestions: <br>
+
+        1. Aluminium Sulphate : Aluminum sulfate will change the soil pH instantly because the aluminum produces the
+        acidity
+        as soon as it dissolves in the soil. <br>
+        2. Sulfur : Sulfur requires some time for the conversion to sulfuric acid with the aid of soil bacteria. The
+        conversion rate of the sulfur is dependent on the fineness of the sulfur, the amount of soil moisture, soil
+        temperature and the presence of the bacteria. <br>
+        3. Addition of appreciable amount of organic matter will help acidify the soil. <br>
+        {% elif phkey == "phLow" %}
+        <br><h4><b>
+                The pH value of your soil is low. </b></h4>
+
+        Please consider the following suggestions: <br>
+
+        1. Selecting a Liming Material: Hydrated lime should be used with caution since it has a greater ability to
+        neutralize soil acidity than regular limestone. <br>
+        2. Wood Ashes: Wood ashes can be used to raise the soil pH. They contain fairly high amounts of potassium &
+        calcium,
+        and small amounts of phosphate, boron and other elements. They are not as effective as limestone but with
+        repeated
+        use, they can drastically raise the pH value of a soil, especially if the soil is sandy in texture. <br>
+        3. Add lime or potassium carbonate to the soil as fertilizers. Pure calcium carbonate is very effective in
+        increasing the pH value of the soil. <br>
+        {% else %}
+        <br><h4><b>
+                The pH value of your soil is within the optimal range. </b></h4>
+        {% endif %}
+
+    </div>
+</div>
+<br>
 {% endblock %}

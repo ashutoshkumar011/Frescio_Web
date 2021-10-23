@@ -6,7 +6,7 @@ urlpatterns = [
 
     path('', views.home, name='homepage' ),
     path( 'fertilizer', views.fertilizer, name='fert_pred'),
-    path( 'fert_result', views.fertpred, name='fert_res')
+    path( 'fert_result', views.fertpred, name='fert_res'),
     # path('register', views.register, name='register')
     # path('register', views.register, name='register')
     # path('register', include('accounts.urls')),

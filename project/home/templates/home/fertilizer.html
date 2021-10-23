@@ -16,22 +16,22 @@
   padding: 10px;
   border: 5px solid gray;">
 
-    <form method="POST" action="{% url 'fert_res' %}">
+    <form method="POST" action="{% url 'fert_res' %}" style=" padding-top: 20px; padding-left: 10px; padding-right: 10px; ">
         {% csrf_token %}
         <div class="form-group">
-            <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen</b></label>
+            <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen(N)</b></label>
             <input type="number" class="form-control" id="Nitrogen" name="nitrogen"
                 placeholder="Enter the value (example:40)" style="font-weight: bold" required />
         </div>
 
         <div class="form-group">
-            <label for="Phosphorous" style="font-size: 17px"><b>Phosphorous</b></label>
+            <label for="Phosphorous" style="font-size: 17px"><b>Phosphorous(P)</b></label>
             <input type="number" class="form-control" id="Phosphorous" name="phosphorous"
                 placeholder="Enter the value (example:40)" style="font-weight: bold" required />
         </div>
 
         <div class="form-group">
-            <label for="Pottasium" style="font-size: 17px"><b>Pottasium</b></label>
+            <label for="Pottasium" style="font-size: 17px"><b>Pottasium(K)</b></label>
             <input type="number" class="form-control" id="Pottasium" name="pottasium"
                 placeholder="Enter the value (example:40)" style="font-weight: bold" required />
         </div>
