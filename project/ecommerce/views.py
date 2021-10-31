@@ -6,10 +6,12 @@ from user.models import crop
 # Create your views here.
 
 def sellcrops(request):
+    print("bbbbbbb")
     if request.user.is_authenticated:
         if request.POST:
-            name = request.POST.get('name')
-            if name == "add_new_crop":
+            print("bbbbbbb")
+            # name = request.POST.get('name')
+            if request.POST.get('submit') == "add_new_crop":
                 crop_name = request.POST['crop_name']
                 price = request.POST['price']
                 quantity = request.POST['quantity']
@@ -17,6 +19,22 @@ def sellcrops(request):
                 new_crop = crop( user=request.user, crop_name = crop_name, price=price, quantity=quantity, photo=photo)
                 new_crop.save()
                 print(new_crop)
+            # elif request.POST.get('submit') == "edit_crop":
+
+            #     return 
+            elif request.POST.get('submit') == "delete_crop":
+                print("asdfsad")
+                crop.objects.filter(id=request.POST.get('crop_id')).delete()
+
+            elif request.POST.get('submit') == "edit_crop":
+                
+                crop_name = request.POST['crop_name']
+                price = request.POST['price']
+                quantity = request.POST['quantity']
+                photo = request.FILES['photo']
+                crop.objects.filter(id=request.POST.get('crop_id')).update(crop_name=crop_name,price=price,quantity=quantity,photo=photo)
+                
+                # return 
         context = {}
         # context['crop'] = {'sdf','asd','lol'}
         data=[]

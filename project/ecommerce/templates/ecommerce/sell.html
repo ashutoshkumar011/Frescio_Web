@@ -132,15 +132,25 @@
   .card button:hover {
     opacity: 0.7;
   }
+  .modal-backdrop {
+    z-index: 0;
+  }
 </style>
-</head>
-
-<body>
 
   <h2></h2>
 
   <!-- Trigger/Open The Modal -->
   <button id="myBtn" style="margin-left:2rem; margin-top:1rem; color:green">Add Crop</button>
+
+  <hr>
+  <hr>
+
+  {% if %}
+
+
+  {% include 'ecommerce/list_of_crops.html' with edit_type='crops_added' %}
+            
+
 
   <!-- The Modal -->
   <div id="myModal" class="modal">
@@ -155,7 +165,6 @@
         </br>
         <form action="" method='POST' enctype="multipart/form-data">
           {% csrf_token %}
-          <input type="hidden" name="name" value="add_new_crop">
           <div class="form-floating mb-3">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
@@ -196,36 +205,13 @@
 
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" type="submit">Save</button>
+        <button class="btn btn-primary" type="submit" name="submit" value="add_new_crop">Save</button>
         </form>
       </div>
     </div>
 
   </div>
 
-  <hr>
-  <hr>
-
-  <div class="row" style=" padding-left: 70px; padding-right: 70px">
-    {% for some_crop in crops_added %}
-    
-    <div class="col-lg-4" style=" padding-left: 25px; padding-right: 25px; margin-bottom: 120px; display: block; width: 20%; max-width:20%; padding-bottom: 30px; height:220px;  max-height:220px; min-height:220px; ">
-      <img class="thumbnail" style="width: 100%; height: 90%; " src="{{ some_crop.photo.url }}">
-      <div class="box-element product">
-        <h6><strong>{{some_crop.crop_name}}</strong></h6>
-        <hr>
-
-        <button class="btn btn-outline-secondary add-btn">Edit</button>
-        <button class="btn btn-outline-secondary add-btn">Delete</button>
-        <!-- <a class="btn btn-outline-success" href="#">Edit</a> -->
-        <h4 style="display: inline-block; float: right"><strong>Rs. {{some_crop.price}}</strong></h4>
-        <hr>
-      </div>
-    </div>
-  
-    {% endfor %}
-    
-  </div>
 
 
 
@@ -242,6 +228,7 @@
 
     // When the user clicks the button, open the modal 
     btn.onclick = function () {
+      console.log("xxxxxxxxxxx")
       modal.style.display = "block";
     }
 
