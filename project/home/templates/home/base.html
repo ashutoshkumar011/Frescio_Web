@@ -133,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                    <li><a class="list-border" href="/">Home</a></li>
+                                    <li><a class="list-border {% if request.resolver_match.url_name == 'homepage' %} active {% endif %} " href="/">Home</a></li>
                                     <li><a class="list-border {% if request.resolver_match.url_name == 'sell_crops' %} active {% endif %} " href="{% url 'sell_crops' %}">E-Bazaar</a></li>
                                     <li><a class="list-border {% if request.resolver_match.url_name == 'fert_pred' %} active {% endif %} " href="{% url 'fert_pred' %}">Fertilizer</a></li>
                                     <li><a href="gallery.html">About</a></li>
