@@ -47,7 +47,7 @@ def sellcrops(request):
         context['crop'] = data
 
         crops_added = crop.objects.filter(user=request.user)
-        
-        return render( request, 'ecommerce/sell.html', {'crop':data, 'crops_added': crops_added} )
+        all_crops = crop.objects.filter()
+        return render( request, 'ecommerce/sell.html', {'crop':data, 'crops_added': crops_added ,"all_crops":all_crops })
     else:
         return HttpResponse("sorry")
